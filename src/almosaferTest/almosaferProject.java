@@ -1,12 +1,15 @@
 package almosaferTest;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Random;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -115,28 +118,121 @@ public class almosaferProject {
 	}
 
 	@Test(priority = 8)
-	public void randomLanguage() {
+	public void randomLanguage() throws InterruptedException {
 
 		String[] myWebsites = { "https://www.almosafer.com/en", "https://www.almosafer.com/ar" };
+
+		String[] arabicCitys = { "دبي", "جدة" };
+		String[] englishCitys = { "Dubai", "Jeddah", "Riyadh" };
+
+		int arabicRand = rand.nextInt(arabicCitys.length);
+		int englishRand = rand.nextInt(englishCitys.length);
 
 		int randWebsite = rand.nextInt(myWebsites.length);
 
 		driver.get(myWebsites[randWebsite]);
 
-		String ActualLaguage = driver.findElement(By.tagName("html")).getAttribute("lang");
+		WebElement hotelButton = driver.findElement(By.id("uncontrolled-tab-example-tab-hotels"));
+		hotelButton.click();
 
-		if (ActualLaguage == "ar") {
+		String actualLanguage = driver.findElement(By.tagName("html")).getAttribute("lang");
 
-			String ExpectedLanguage = "ar";
-			Assert.assertEquals(ActualLaguage, ExpectedLanguage);
+		if ("ar".equals(actualLanguage)) {
+
+			WebElement cityInput = driver.findElement(By.cssSelector(".sc-phbroq-2.uQFRS.AutoComplete__Input "));
+			cityInput.sendKeys(arabicCitys[arabicRand]);
+
+			String expectedLanguage = "ar";
+			Assert.assertEquals(actualLanguage, expectedLanguage);
+
 		} else {
 
-			String ExpectedLanguage = "en";
+			WebElement cityInput = driver.findElement(By.cssSelector(".sc-phbroq-2.uQFRS.AutoComplete__Input "));
+			cityInput.sendKeys(englishCitys[englishRand]);
 
-			Assert.assertEquals(ActualLaguage, ExpectedLanguage);
-
+			String expectedLanguage = "en";
+			Assert.assertEquals(actualLanguage, expectedLanguage);
 		}
-
+		
+		Thread.sleep(2000);
+		
+		WebElement firstCity = driver.findElement(By.cssSelector(".sc-phbroq-4.gGwzVo.AutoComplete__List"));
+		firstCity.findElements(By.tagName("li")).get(1).click();
+	
+		
+	    WebElement selectVedtor = driver.findElement(By.cssSelector(".sc-tln3e3-1.gvrkTi"));
+		
+		Select select = new Select(selectVedtor);
+		
+		int randomVestorNumber =  rand.nextInt(2);
+		
+		select.selectByIndex(randomVestorNumber);
+	
+		WebElement searchButton = driver.findElement(By.xpath("//button[@data-testid='HotelSearchBox__SearchButton']"));
+		
+		searchButton.click();
 	}
+	
+	@Test(priority = 9)
+	public void loadPage () throws InterruptedException {
+		
+		Thread.sleep(20000);
+		
+		WebElement result = driver.findElement(By.xpath("//span[@data-testid='srp_properties_found']"));
+		
+	boolean AcutalResult = 	result.getText().contains("مكان") || result.getText().contains("found")  ;
+	
+	boolean ExpectedRuselt = true ;
+	
+	Assert.assertEquals(AcutalResult, ExpectedRuselt);
+		
+		
+	}
+	
+	@Test(priority = 10 )
+	public void lowestPrice() throws InterruptedException {
+		
+		Thread.sleep(15000);
+		
+	WebElement lowPriceButton =	driver.findElement(By.xpath("//div[@data-testid='srp_sort_LOWEST_PRICE']"));
+	lowPriceButton.click();      
+	
+	
+	List<WebElement> prices = driver.findElements(By.cssSelector(".MuiTypography-root.MuiTypography-heading3SemBld.__ds__comp.undefined.muiltr-18vmb2l"));
+
+	if(driver.getCurrentUrl().contains("en")) {
+		
+		int lowestPrice =  Integer.parseInt(prices.get(1).getText().replace("SAR ",""));
+		
+		int highestPrice = Integer.parseInt(prices.get(prices.size()-1).getText().replace("SAR ",""));
+		
+		boolean Acutual = lowestPrice<highestPrice;
+		boolean Expected = true ;
+		
+		Assert.assertEquals(Acutual, Expected);
+	}
+	else {
+	int lowestPrice =  Integer.parseInt(prices.get(1).getText().replace("ر.س.‏ ",""));
+		
+		int highestPrice = Integer.parseInt(prices.get(prices.size()-1).getText().replace("ر.س.‏ ",""));
+		
+		boolean Acutual = lowestPrice<highestPrice;
+		boolean Expected = true ;
+		
+		Assert.assertEquals(Acutual, Expected);
+		
+	}
+			
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }

@@ -1,48 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-08T20:39:13 EET" name="Default suite" finished-at="2024-12-08T20:39:22 EET" duration-ms="9142">
+  <suite started-at="2024-12-18T16:11:50 EET" name="Default suite" finished-at="2024-12-18T16:12:55 EET" duration-ms="65106">
     <groups>
     </groups>
-    <test started-at="2024-12-08T20:39:13 EET" name="Default test" finished-at="2024-12-08T20:39:22 EET" duration-ms="9142">
+    <test started-at="2024-12-18T16:11:50 EET" name="Default test" finished-at="2024-12-18T16:12:55 EET" duration-ms="65106">
       <class name="almosaferTest.almosaferProject">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:almosaferTest.almosaferProject@2654635]" started-at="2024-12-08T20:39:13 EET" name="setUp" finished-at="2024-12-08T20:39:19 EET" duration-ms="6199" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:almosaferTest.almosaferProject@15dcfae7]" started-at="2024-12-18T16:11:50 EET" name="setUp" finished-at="2024-12-18T16:11:56 EET" duration-ms="6291" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="languageEn()[pri:1, instance:almosaferTest.almosaferProject@2654635]" started-at="2024-12-08T20:39:19 EET" name="languageEn" finished-at="2024-12-08T20:39:19 EET" duration-ms="64" status="PASS">
+        <test-method signature="languageEn()[pri:1, instance:almosaferTest.almosaferProject@15dcfae7]" started-at="2024-12-18T16:11:56 EET" name="languageEn" finished-at="2024-12-18T16:11:56 EET" duration-ms="61" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- languageEn -->
-        <test-method signature="currencySar()[pri:2, instance:almosaferTest.almosaferProject@2654635]" started-at="2024-12-08T20:39:19 EET" name="currencySar" finished-at="2024-12-08T20:39:19 EET" duration-ms="54" status="PASS">
+        <test-method signature="currencySar()[pri:2, instance:almosaferTest.almosaferProject@15dcfae7]" started-at="2024-12-18T16:11:56 EET" name="currencySar" finished-at="2024-12-18T16:11:56 EET" duration-ms="70" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- currencySar -->
-        <test-method signature="contactNumber()[pri:3, instance:almosaferTest.almosaferProject@2654635]" started-at="2024-12-08T20:39:19 EET" name="contactNumber" finished-at="2024-12-08T20:39:19 EET" duration-ms="84" status="PASS">
+        <test-method signature="contactNumber()[pri:3, instance:almosaferTest.almosaferProject@15dcfae7]" started-at="2024-12-18T16:11:56 EET" name="contactNumber" finished-at="2024-12-18T16:11:56 EET" duration-ms="49" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- contactNumber -->
-        <test-method signature="qitaf()[pri:4, instance:almosaferTest.almosaferProject@2654635]" started-at="2024-12-08T20:39:20 EET" name="qitaf" finished-at="2024-12-08T20:39:20 EET" duration-ms="116" status="PASS">
+        <test-method signature="qitaf()[pri:4, instance:almosaferTest.almosaferProject@15dcfae7]" started-at="2024-12-18T16:11:56 EET" name="qitaf" finished-at="2024-12-18T16:11:56 EET" duration-ms="79" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- qitaf -->
-        <test-method signature="hotelsNotSelected()[pri:5, instance:almosaferTest.almosaferProject@2654635]" started-at="2024-12-08T20:39:20 EET" name="hotelsNotSelected" finished-at="2024-12-08T20:39:20 EET" duration-ms="56" status="PASS">
+        <test-method signature="hotelsNotSelected()[pri:5, instance:almosaferTest.almosaferProject@15dcfae7]" started-at="2024-12-18T16:11:56 EET" name="hotelsNotSelected" finished-at="2024-12-18T16:11:56 EET" duration-ms="68" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- hotelsNotSelected -->
-        <test-method signature="flightDeparture()[pri:6, instance:almosaferTest.almosaferProject@2654635]" started-at="2024-12-08T20:39:20 EET" name="flightDeparture" finished-at="2024-12-08T20:39:21 EET" duration-ms="1207" status="PASS">
+        <test-method signature="flightDeparture()[pri:6, instance:almosaferTest.almosaferProject@15dcfae7]" started-at="2024-12-18T16:11:56 EET" name="flightDeparture" finished-at="2024-12-18T16:11:57 EET" duration-ms="921" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flightDeparture -->
-        <test-method signature="flightReturn()[pri:7, instance:almosaferTest.almosaferProject@2654635]" started-at="2024-12-08T20:39:21 EET" name="flightReturn" finished-at="2024-12-08T20:39:21 EET" duration-ms="228" status="PASS">
+        <test-method signature="flightReturn()[pri:7, instance:almosaferTest.almosaferProject@15dcfae7]" started-at="2024-12-18T16:11:57 EET" name="flightReturn" finished-at="2024-12-18T16:11:58 EET" duration-ms="103" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flightReturn -->
-        <test-method signature="randomLanguage()[pri:8, instance:almosaferTest.almosaferProject@2654635]" started-at="2024-12-08T20:39:21 EET" name="randomLanguage" finished-at="2024-12-08T20:39:22 EET" duration-ms="1030" status="PASS">
+        <test-method signature="randomLanguage()[pri:8, instance:almosaferTest.almosaferProject@15dcfae7]" started-at="2024-12-18T16:11:58 EET" name="randomLanguage" finished-at="2024-12-18T16:12:17 EET" duration-ms="19628" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- randomLanguage -->
+        <test-method signature="loadPage()[pri:9, instance:almosaferTest.almosaferProject@15dcfae7]" started-at="2024-12-18T16:12:17 EET" name="loadPage" finished-at="2024-12-18T16:12:37 EET" duration-ms="20105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadPage -->
+        <test-method signature="lowestPrice()[pri:10, instance:almosaferTest.almosaferProject@15dcfae7]" started-at="2024-12-18T16:12:37 EET" name="lowestPrice" finished-at="2024-12-18T16:12:55 EET" duration-ms="17632" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- lowestPrice -->
       </class> <!-- almosaferTest.almosaferProject -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

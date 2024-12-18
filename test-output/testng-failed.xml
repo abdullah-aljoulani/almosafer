@@ -6,7 +6,9 @@
       <class name="almosaferTest.almosaferProject">
         <methods>
           <include name="setUp"/>
-          <include name="qitaf"/>
+          <include name="loadPage"/>
+          <include name="randomLanguage"/>
+          <include name="lowestPrice"/>
         </methods>
       </class> <!-- almosaferTest.almosaferProject -->
     </classes>
